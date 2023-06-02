@@ -2,3 +2,8 @@ venv/
 
 __pycache__/
 
+address_book.db
+
+.env
+
+#only slash on folders
