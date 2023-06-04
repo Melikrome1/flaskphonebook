@@ -1,0 +1,19 @@
+{% extends 'index.html' %}
+
+{% block content %}
+  <h1>Profile: {{ user.username }}</h1>
+
+  <h2>Edit Profile</h2>
+  <form method="POST" action="{{ url_for('profile', username=user.username) }}">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+      {{ form.username.label }} {{ form.username(class="form-control") }}
+    </div>
+    <div class="form-group">
+      {{ form.email.label }} {{ form.email(class="form-control") }}
+    </div>
+    <div class="form-group">
+      {{ form.submit(class="btn btn-primary") }}
+    </div>
+  </form>
+{% endblock %}
