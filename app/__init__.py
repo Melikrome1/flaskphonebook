@@ -17,5 +17,5 @@ login = LoginManager(app)
 login.login_view = 'login'
 login.login_message_category = 'warning'
 
-from app import routes, models
+from app import routes, models, config
 
